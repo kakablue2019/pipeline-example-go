@@ -17,6 +17,7 @@ func TestHelloHandler(t *testing.T) {
 		t.Fatalf("handler returned wrong status code: got %v want %v",
 			status, http.StatusOK)
 	}
+    
 	if b := w.Body.String(); b!= webContent {
 		t.Fatalf("body = %s, want no", b)
 	}
